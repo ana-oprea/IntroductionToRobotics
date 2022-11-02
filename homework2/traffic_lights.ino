@@ -93,7 +93,7 @@ void buttonStatus(){
    if ((millis() - lastDebounceTime) > debounceDelay) {
      buttonState = reading;
     // if the button hasn't been pressed before, record that it was pressed
-     if (buttonState == LOW && phase == 1 && isButtonPressed == LOW) {
+     if (buttonState == LOW && phase == 1 && isButtonPressed == 0) {
        isButtonPressed = 1;
        timeSinceLastPress = millis();
       }
