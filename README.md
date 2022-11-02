@@ -19,3 +19,27 @@ The values read from each potentiometer range from 0 to 1023, and each color of 
 
 ### Video
 https://youtu.be/A-1eMlE3CVA
+
+## Homework 2
+### Components:
+* 5 leds
+* 6 resistors
+* 1 pushbutton
+* 1 buzzer
+* wires
+
+### Technical Task
+Building  the  traffic  lights  for  a  crosswalk. You will use 2 LEDs to represent the traffic lights for people (red and green) and 3 LEDs to represent the traffic lights for cars (red, yellow and green).
+
+### Implementation details
+There are 4 states:
+* State 1. (default state) green light for cars, red for people, no sounds, the state is changed by pressing the button.
+* State 2. (initiated 8 seconds after pushing the button) yellow for cars, red for people, no sounds, duration: 3 seconds.
+* State 3. (initiated at the end of state 2) red for cars, green for people, a beeping sound from buzzer at a constant interval, duraton: 8 seconds.
+* State 4. (initiated at the end of state 3) red for cars, blinking green for people, a beeping sound from the buzzer at a constant interval, duration: 4 seconds.
+
+### Picture of the setup
+![WhatsApp Image 2022-11-02 at 3 14 58 AM](https://user-images.githubusercontent.com/80201759/199372824-b2537a50-7b86-4cc4-9e14-a9baa9e2c331.jpeg)
+
+### Video
+https://youtu.be/X8QO-E7MXTM
