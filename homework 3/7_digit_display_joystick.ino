@@ -29,7 +29,7 @@ int state = 1;
 int currentSelectedValue;
 
 unsigned long lastDebounceTime;
-unsigned int debounceDelay = 100;
+unsigned int debounceDelay = 50;
 unsigned int debounceDelayLong = 1000;
 unsigned long lastBlinkTime;
 
@@ -225,7 +225,7 @@ void buttonStatus(){
    if (((millis() - lastDebounceTime) > debounceDelayLong) && state == 1 && reading == LOW){
       for(int i = 0; i < segSize; i++)
         digitArray[i] = 0;
-      
+      currentSelectedValue = 7;
    }
    else if ((millis() - lastDebounceTime) > debounceDelay) {
      swState = reading;
