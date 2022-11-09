@@ -41,5 +41,23 @@ There are 4 states:
 ### Picture of the setup
 ![WhatsApp Image 2022-11-02 at 3 14 58 AM](https://user-images.githubusercontent.com/80201759/199372824-b2537a50-7b86-4cc4-9e14-a9baa9e2c331.jpeg)
 
+## Homework 3
+### Components:
+* 1 7-segment display
+* 1 joystick
+* resistors
+* wires
+
+### Technical Task
+You will use the joystick to control the position of the segment and ”draw” on the display. The movement between segments should be natural (meaning they should jump from the current position only to neighbors, but without passing through ”walls”.
+
+### Implementation details
+There are 2 states:
+* State 1. (default state) use joystick to move from one position to neighbors, short pressing the button toggles state 2. Long Pressign the button resets the entire display and moves the current position to the decimal point.
+* State 2. (initiated after pushing the button) the current segment stops blinking, adopting the state of the segment before selection. Toggling the X axis should change the value of the segment state from ON to OFF and from OFF to ON. Clicking the joystick should save the segment state and exit back to state 1.
+
+### Picture of the setup
+![aef1db09-c35b-4083-ab9d-6db4906d367b](https://user-images.githubusercontent.com/80201759/200861220-3523a69a-fea9-4b48-85a5-e2f498ee8b4d.jpeg)
+
 ### Video
-https://youtu.be/X8QO-E7MXTM
+https://www.youtube.com/watch?v=S7BMqWEZUIY
