@@ -64,3 +64,26 @@ There are 2 states:
 
 ### Video
 https://www.youtube.com/watch?v=S7BMqWEZUIY
+
+## Homework 4
+### Components:
+* 4 digit 7-segment display
+* 1 joystick
+* 74hc595 shift register
+* wires
+
+### Technical Task
+Use the joystick to move through the 4 digit 7 segment displays digits, press the button to lock in on the current digit and use the other axis to increment or decrement the number. Keep the button pressed to reset all the digit values and the current position to the first digit in the first state.
+
+### Implementation details
+There are 2 states:
+* State 1. you can use a joystick axis to cycle through the 4 digits; using the other axis does nothing. A blinking decimal point showsthe current digit position. When pressing the button, you lock in onthe selected digit and enter the second state.
+* State 2. in this state, the decimal point stays always on, no longer blinking and you can no longer use the axis to cycle throughthe 4 digits.   Instead, using the other axis, you can increment or decrement the number on the current digit IN HEX (aka  from  0 to F, as in the lab).  Pressing the button again returns you to the previous state.  Also, keep in mind that when changing the number, you must increment it for each joystick  movement - it  should  notwork continuosly increment if you keep the joystick in one position
+* Reset:  toggled by long pressing the button only in the first state. When resetting, all the digits go back to 0 and the current position is set to the first (rightmost) digit, in the first state.
+
+### Picture of the setup
+![c0f1ac42-7955-4233-b171-1af1167ac920](https://user-images.githubusercontent.com/80201759/202220590-bddf4685-1fa2-4042-b037-eb1829689c28.jpeg)
+
+
+### Video
+https://www.youtube.com/watch?v=eMhBunDrKtI
