@@ -41,6 +41,9 @@ There are 4 states:
 ### Picture of the setup
 ![WhatsApp Image 2022-11-02 at 3 14 58 AM](https://user-images.githubusercontent.com/80201759/199372824-b2537a50-7b86-4cc4-9e14-a9baa9e2c331.jpeg)
 
+### Video
+https://youtu.be/X8QO-E7MXTM
+
 ## Homework 3
 ### Components:
 * 1 7-segment display
