@@ -123,6 +123,23 @@ Create a menu for your game, emphasis on the game. You should scroll on the LCD 
   * Screen 1: a message such as ”Congratulations on reaching level/score X”. ”You did better than y people.”. etc. Switches to screen 2 upon interaction (button press) or after a few moments.
   * Screen 2: display relevant game info: score, time, lives left etc. Must inform player if he/she beat the highscore. This menu should only be closed by the player, pressing a button.
 
+### Implementation Details
+When you power the project, you're prompted to enter your name (3 letters), move the joystick up and down to change letters, once you have all 3 letters, press the joystick to confirm. After that, a short message with "Welcome to snake" is gonna show up, then the main menu opens.
+
+The main menu has 5 options:
+* Start game: play the game
+* Settings: make changes to LCD contrast/brightness, matrix brightness, difficulty, sounds (ON/OFF)
+* High scores: see the top 5 players and their score
+* How to play: a brief description of the game and how to play it
+* About: information about the developer
+
+## Navigation
+* Moving through the menu is done by moving the joystick up and down to cycle the menu, to view an option, press the joystick. 
+* If you are in a sub-menu (Start game, Settings, High scores, How to play, About) and want to exit, press the joystick. 
+* If you are in Settings and want to change a value, move to that sub-section (LCD contrast/brightness, matrix brightness, difficulty, sounds) and an arrow should be pointing to the option you want to change, from there just move the joystick left and right to change the value, any change you make is going to be saved. If you want to exit, press the joystick and you are in the main manu again.
+* If you are in game and want to exit, press the button and that will take you to the main menu.
+* If you are at the end of the game (you lost) a brief "Game over" and your score will be shown on the lcd, after a short period you are met with the message "Try again" if you didn't make top 5, or with "You made top 5" if you managed your way on to the high score board. Press the button to return to the main menu.
+
 ### Picture of the setup
 ![131d6f02-4c91-47ca-9836-dacf87b737fe](https://user-images.githubusercontent.com/80201759/206207464-e2b4a6b9-cbd4-4b97-9c37-b8a9740d4fee.jpeg)
 
