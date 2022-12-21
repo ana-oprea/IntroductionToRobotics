@@ -95,6 +95,9 @@ https://www.youtube.com/watch?v=eMhBunDrKtI
 * joystick
 * resistors
 * wires
+* buzzer
+* 100k ohm resistor
+* 100 ohm resistor
 
 ### Technical Task
 Create a menu for your game, emphasis on the game. You should scroll on the LCD with the joystick. Remember you have quite a lot of flexibility here, but do not confuse that with a free ticket to slack off. The menu should include the following functionality:
@@ -102,20 +105,20 @@ Create a menu for your game, emphasis on the game. You should scroll on the LCD 
 1. When powering up a game, a greeting message should be shown for a few moments.
 2. Should contain roughly the following categories:
   a) Start game, starts the initial level of your game
-  b) Highscore (TODO: values not yet saved in eeprom):
+  b) Highscore:
     * Initially, we have 0.
     * Update it when the game is done. Highest possible score should be achieved by starting at a higher level.
     * Save the top 5+ values in EEPROM with name and score.
   c) Settings:
     * Enter name. The name should be shown in highscore. Maybe somewhere else, as well?
-    * Difficulty (saved to EEPROM)
-    * LCD contrast control (not yet saved in EEPROM)
-    * LCD brightness control (mandatory, must change LED wire that’s directly connected to 5v) (not yet saved to EEPROM)
-    * Matrix brightness control (see function setIntesnity from the ledControl library) (not yet saved to EEPROM)
-    * Sounds on or off (not yet saved to EEPROM)
+    * Difficulty
+    * LCD contrast control
+    * LCD brightness control (mandatory, must change LED wire that’s directly connected to 5v)
+    * Matrix brightness control (see function setIntesnity from the ledControl library)
+    * Sounds on or off
     * Extra stuff can include items specific to the game mechanics, or other settings such as chosen theme song etc. Again, save it to eeprom.
   d) About: should include details about the creator(s) of the game. At least game name, author and github link or user (use scrolling text?)
-  e) How to play: short and informative description (not yet implemented)
+  e) How to play: short and informative description
 3. While playing the game: display all relevant info
   * Lives
   * Score
@@ -140,8 +143,10 @@ The main menu has 5 options:
 * If you are in game and want to exit, press the button and that will take you to the main menu.
 * If you are at the end of the game (you lost) a brief "Game over" and your score will be shown on the lcd, after a short period you are met with the message "Try again" if you didn't make top 5, or with "You made top 5" if you managed your way on to the high score board. Press the button to return to the main menu.
 
-### Picture of the setup
-![131d6f02-4c91-47ca-9836-dacf87b737fe](https://user-images.githubusercontent.com/80201759/206207464-e2b4a6b9-cbd4-4b97-9c37-b8a9740d4fee.jpeg)
+### Picture of the setup (updated)
+![46282895-7cbe-4830-bdf6-6f28d0b9ae2c](https://user-images.githubusercontent.com/80201759/208938267-9c9d5e91-2539-4902-8b23-efe7afa9806d.jpeg)
 
 ### Video
 https://youtu.be/aGQtVZvUgOo
+### Updated Video
+https://www.youtube.com/watch?v=FRJVdvrxxxs
