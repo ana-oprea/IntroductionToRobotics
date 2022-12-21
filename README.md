@@ -102,26 +102,43 @@ Create a menu for your game, emphasis on the game. You should scroll on the LCD 
 1. When powering up a game, a greeting message should be shown for a few moments.
 2. Should contain roughly the following categories:
   a) Start game, starts the initial level of your game
-  b) Highscore:
+  b) Highscore (TODO: values not yet saved in eeprom):
     * Initially, we have 0.
     * Update it when the game is done. Highest possible score should be achieved by starting at a higher level.
     * Save the top 5+ values in EEPROM with name and score.
   c) Settings:
     * Enter name. The name should be shown in highscore. Maybe somewhere else, as well?
-    * Starting level: Set the starting level value. The idea is to be able to start from a higher level as well. Can be replaced with difficulty.
-    * LCD contrast control (optional, it replaces the potentiome- ter). Save it to eeprom.
-    * LCD brightness control (mandatory, must change LED wire that’s directly connected to 5v). Save it to eeprom.
-    * Matrix brightness control (see function setIntesnity from the ledControl library). Save it to eeprom.
-    * Sounds on or off. Save it to eeprom.
+    * Difficulty (saved to EEPROM)
+    * LCD contrast control (not yet saved in EEPROM)
+    * LCD brightness control (mandatory, must change LED wire that’s directly connected to 5v) (not yet saved to EEPROM)
+    * Matrix brightness control (see function setIntesnity from the ledControl library) (not yet saved to EEPROM)
+    * Sounds on or off (not yet saved to EEPROM)
     * Extra stuff can include items specific to the game mechanics, or other settings such as chosen theme song etc. Again, save it to eeprom.
   d) About: should include details about the creator(s) of the game. At least game name, author and github link or user (use scrolling text?)
-  e) How to play: short and informative description
+  e) How to play: short and informative description (not yet implemented)
 3. While playing the game: display all relevant info
   * Lives
   * Score
 4. Upon game ending:
   * Screen 1: a message such as ”Congratulations on reaching level/score X”. ”You did better than y people.”. etc. Switches to screen 2 upon interaction (button press) or after a few moments.
   * Screen 2: display relevant game info: score, time, lives left etc. Must inform player if he/she beat the highscore. This menu should only be closed by the player, pressing a button.
+
+### Implementation Details
+When you power the project, you're prompted to enter your name (3 letters), move the joystick up and down to change letters, once you have all 3 letters, press the joystick to confirm. After that, a short message with "Welcome to snake" is gonna show up, then the main menu opens.
+
+The main menu has 5 options:
+* Start game: play the game
+* Settings: make changes to LCD contrast/brightness, matrix brightness, difficulty, sounds (ON/OFF)
+* High scores: see the top 5 players and their score
+* How to play: a brief description of the game and how to play it
+* About: information about the developer
+
+## Navigation
+* Moving through the menu is done by moving the joystick up and down to cycle the menu, to view an option, press the joystick. 
+* If you are in a sub-menu (Start game, Settings, High scores, How to play, About) and want to exit, press the joystick. 
+* If you are in Settings and want to change a value, move to that sub-section (LCD contrast/brightness, matrix brightness, difficulty, sounds) and an arrow should be pointing to the option you want to change, from there just move the joystick left and right to change the value, any change you make is going to be saved. If you want to exit, press the joystick and you are in the main manu again.
+* If you are in game and want to exit, press the button and that will take you to the main menu.
+* If you are at the end of the game (you lost) a brief "Game over" and your score will be shown on the lcd, after a short period you are met with the message "Try again" if you didn't make top 5, or with "You made top 5" if you managed your way on to the high score board. Press the button to return to the main menu.
 
 ### Picture of the setup
 ![131d6f02-4c91-47ca-9836-dacf87b737fe](https://user-images.githubusercontent.com/80201759/206207464-e2b4a6b9-cbd4-4b97-9c37-b8a9740d4fee.jpeg)
